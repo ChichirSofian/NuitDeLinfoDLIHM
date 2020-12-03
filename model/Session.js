@@ -1,16 +1,19 @@
-
-
-export class Session {
-    constructor(timeStamp1,timeStamp2){
-        this.timeStamp1 = timeStamp1;
-        this.timeStamp2 = timeStamp2;
-    }
-    //TODO traiter les timestamps
-    toJSON(){
-        return {
-          name : this.name,
-          codeZip : this.codeZip
+"use strict";
+exports.__esModule = true;
+var Spot_1 = require("./Spot");
+var Session = /** @class */ (function () {
+    function Session(timeStamps1, timeStamp2, spot) {
+        var args = [];
+        for (var _i = 3; _i < arguments.length; _i++) {
+            args[_i - 3] = arguments[_i];
         }
+        this.timeStamp1 = timeStamps1;
+        this.timeStamp2 = timeStamp2;
+        if (spot instanceof Spot_1.Spot) {
+            this.spot = spot;
+        }
+        this.args = args;
     }
-}
-$
+    return Session;
+}());
+exports.Session = Session;
