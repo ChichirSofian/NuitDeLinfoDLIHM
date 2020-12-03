@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.Ville = void 0;
 var Ville = /** @class */ (function () {
     function Ville(name, codeZip) {
         this.name = name;

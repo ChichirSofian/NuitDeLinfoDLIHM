@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.Session = void 0;
 var Spot_1 = require("./Spot");
 var Session = /** @class */ (function () {
     function Session(timeStamps1, timeStamp2, spot) {
