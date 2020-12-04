@@ -1,5 +1,5 @@
 <template>
-    <div class="HomeSearchBar" onload="getplage()">
+    <div class="HomeSearchBar" onload="getplage()"> -->
         <input class="search-bar" type="text" @keyup.enter="submit" v-model="nomdelaplage" placeholder="Côte des Basques" aria-label="chercher un spot de baignade" >
         <button @click="btnclicked" type="button" class="btn btn-primary">Rechercher</button>
         <div class="propos" v-show="showpropos">
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-//const axios = require('axios')
+const axios = require('axios')
 
 export default {
     data(){
@@ -23,14 +23,16 @@ export default {
             // weather: {},
 
             rdy : false,
-            listeplage: ["Adele","Agnes","bob","Christiana","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele"], //quelques plages ici
+            listeplage:[], //["Adele","Agnes","bob","Christiana","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele"], //quelques plages ici
             nomdelaplage : '',
             showpropos : false,
         }
     },
     methods: {
         getplage(){
-            null//this.listeplage = axios.get('127.0.0.1:3000/plage').then((response)=>{});
+            axios.get('127.0.0.1:3000/plage').then((response)=>{
+                 response.forEach(plage => this.listeplage.push(plage.name));
+            });
         },
         btnclicked(){
             this.submit();
