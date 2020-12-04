@@ -48,8 +48,11 @@ export default {
             this.nomdelaplage = this.result_plage[index];
         },
     },
+    beforeMount(){
+        this.getplage()
+    },
     computed: {
-        result_plage(){    
+        result_plage(){   
             let res = [];
             let plage = '';
             let i = 0;
