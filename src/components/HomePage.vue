@@ -3,15 +3,21 @@
         <h1>
             {{msg}}
         </h1>
+        <HomeSearchBar/>
     </div>
 </template>
 
 
 <script>
+import HomeSearchBar from '@/components/HomeSearchBar.vue'
+
 export default {
   name: 'HomePage',
   props: {
     msg: String
+  },
+  components: {
+      HomeSearchBar
   }
 }
 </script>

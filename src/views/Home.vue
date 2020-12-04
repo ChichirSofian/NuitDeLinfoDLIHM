@@ -15,3 +15,18 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home{
+  width: 100%;
+  background-size: cover;
+  background-image: url('../assets/beach_homepage.jpg');
+  height : 100vh;
+}
+</style>
