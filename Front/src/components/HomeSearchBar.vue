@@ -30,9 +30,12 @@ export default {
     },
     methods: {
         getplage(){
-            axios.get('127.0.0.1:3000/plage').then((response)=>{
+            axios.get('http://127.0.0.1:3000/plage',{headers: {"Access-Control-Allow-Origin": "*"}}).then((response)=>{
+                
                  response.forEach(plage => this.listeplage.push(plage.name));
-            });
+            }).catch(error => {
+                console.log(error.response)
+            })
         },
         btnclicked(){
             this.submit();
@@ -81,7 +84,8 @@ export default {
                 this.showpropos = false;
             }
         }
-    }
+    },
+    
 }
 </script>
 

@@ -21,6 +21,7 @@ fs.readFile('./data/FrenchBeach.json', 'utf8', (err, jsonString) => {
 
 
 app.get('/plage', (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*");
   var arr = new Array;
   plages.plages.forEach(region => {
     region.spot.forEach(plage => {
