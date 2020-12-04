@@ -7,7 +7,7 @@ var Spot = /** @class */ (function () {
         this.city = city;
         this.value = name + " " + city.name;
     }
-    Spot.prototype.setInfo = function (nbSwimmer, nbNautic, nbShipFisher, nbShipEntertainement, nbShipSails) {
+    Spot.prototype.setInfo = function (nbSwimmer, nbNautic, nbShipFisher, nbShipEntertainement, nbShipSails, waterState) {
         this.nbSwimmer = nbSwimmer;
         this.nbNautic = nbNautic;
         this.nbShipFisher = nbShipFisher;

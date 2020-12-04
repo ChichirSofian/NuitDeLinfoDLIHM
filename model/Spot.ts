@@ -11,14 +11,16 @@ export class Spot {
     nbShipEntertainement:Number;
     nbShipSails:Number;
     value:String;
+    waterState:Number;
 
+    
     constructor(name:String, city:Ville){
         this.name = name;
         this.city = city;
         this.value = name+" "+city.name;
     }
 
-    setInfo(nbSwimmer:Number, nbNautic:Number, nbShipFisher:Number, nbShipEntertainement:Number, nbShipSails:Number){
+    setInfo(nbSwimmer:Number, nbNautic:Number, nbShipFisher:Number, nbShipEntertainement:Number, nbShipSails:Number, waterState:Number){
         this.nbSwimmer = nbSwimmer;
         this.nbNautic = nbNautic;
         this.nbShipFisher = nbShipFisher;
