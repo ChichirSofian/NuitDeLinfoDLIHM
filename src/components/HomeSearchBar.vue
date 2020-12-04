@@ -1,7 +1,7 @@
 <template>
     <div class="HomeSearchBar" onload="getplage()">
         <input class="search-bar" type="text" @keyup.enter="submit" v-model="nomdelaplage" placeholder="Côte des Basques" aria-label="chercher un spot de baignade" >
-        <button @click="btnclicked">Rechercher</button>
+        <button @click="btnclicked" type="button" class="btn btn-primary">Rechercher</button>
         <div class="propos" v-show="showpropos">
             <ul id="list-plage">
                 <li @click="proposclicked(index)" :key="index" v-for="(item,index) in result_plage"><a class="plage">{{item}}</a></li>
@@ -104,5 +104,9 @@ export default {
   /*background-color: rgba(255, 255, 255, 0.5);*/
   border-radius: 0px 16px 0px 16px;
   transition: 0.4s;
+  margin-bottom: 40px;
 }
+
+
+
 </style>

@@ -28,5 +28,6 @@ export default {
   background-size: cover;
   background-image: url('../assets/beach_homepage.jpg');
   height : 100vh;
+  padding-top: 10%;
 }
 </style>
