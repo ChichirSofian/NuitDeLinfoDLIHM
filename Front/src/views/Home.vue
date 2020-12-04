@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HomePage msg="oui"/>
+    <HomePage msg="SURFRIDER"/>
   </div>
 </template>
 
