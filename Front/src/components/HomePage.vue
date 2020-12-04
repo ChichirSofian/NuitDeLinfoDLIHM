@@ -37,4 +37,9 @@ li {
 a {
   color: #42b983;
 }
+
+.homePage{
+  color:white;
+}
+
 </style>

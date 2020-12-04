@@ -23,7 +23,7 @@ export default {
             // weather: {},
 
             rdy : false,
-            listeplage:[], //["Adele","Agnes","bob","Christiana","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele"], //quelques plages ici
+            listeplage:["Audierne", "Baie des Trépassés", "Barre d'Etel", "Brest Blanc Sablons", "Crozon", "Dinard", "Donnant", "Douarnenez", "Fort Bloqué", "Guidel Plage de la falaise", "L'ile aux Vaches", "La Palue","La Torche","Le Dossen","Le Petit Minou","Locquirec","Quiberon Port Blanc"], //["Adele","Agnes","bob","Christiana","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele"], //quelques plages ici
             nomdelaplage : '',
             showpropos : false,
         }
