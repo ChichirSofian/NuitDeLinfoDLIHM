@@ -3,10 +3,11 @@ const bodyParser = require('body-parser');
 const app = express()
 const port = 3000
 const fs = require('fs')
-
+const cors = require('cors')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
+app.use(cors())
 
 var plages;
 
@@ -27,14 +28,9 @@ app.get('/plage', (req, res) => {
     })
   });
 
-  JSON.stringify(plages.plages[0].spot[0]);
   res.send(arr);
 })
 
-app.put('/put',(req,res) => {
-
-
-})
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)

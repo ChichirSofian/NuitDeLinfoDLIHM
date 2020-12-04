@@ -11,7 +11,7 @@
 </template>
 
 <script>
-//const axios = require('axios')
+const axios = require('axios')
 
 export default {
     data(){
@@ -23,14 +23,16 @@ export default {
             // weather: {},
 
             rdy : false,
-            listeplage: ["Adele","Agnes","bob","Christiana","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele"], //quelques plages ici
+            listeplage: [],//["Adele","Agnes","bob","Christiana","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele","Adele"], //quelques plages ici
             nomdelaplage : '',
             showpropos : false,
         }
     },
     methods: {
         getplage(){
-            null//this.listeplage = axios.get('127.0.0.1:3000/plage').then((response)=>{});
+           axios.get('http://localhost:3000/plage').then((response)=>{
+               response.forEach(element => this.listeplage.push(element.name))
+           });
         },
         btnclicked(){
             this.submit();
@@ -46,8 +48,11 @@ export default {
             this.nomdelaplage = this.result_plage[index];
         },
     },
+    beforeMount(){
+        this.getplage()
+    },
     computed: {
-        result_plage(){    
+        result_plage(){   
             let res = [];
             let plage = '';
             let i = 0;
